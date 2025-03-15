@@ -4,12 +4,12 @@ body {
     padding: 0;
     background-color: rgb(18, 18, 20);
     color: white;
-    background-image: url('background.jpg'); /* Путь к изображению */
-    background-size: cover; /* Растягиваем изображение на весь экран */
-    background-position: center; /* Центрируем изображение */
-    background-attachment: fixed; /* Фиксируем фон при прокрутке */
-    background-blend-mode: overlay; /* Наложение фона на цвет */
-    background-color: rgba(18, 18, 20, 0.9); /* Затемнение фона */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: rgba(18, 18, 20, 0.9);
 }
 
 .navbar {
@@ -20,6 +20,7 @@ body {
 .navbar-brand {
     font-size: 24px;
     font-weight: bold;
+    color: #07ddf5 !important; /* Голубой цвет для SpinClient в навбаре */
 }
 
 .nav-link {
@@ -27,11 +28,32 @@ body {
     margin: 0 15px;
 }
 
+.heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 20vh;
+    text-shadow: 0 0 10px rgba(7, 221, 245, 0.8), 0 0 20px rgba(7, 221, 245, 0.6);
+}
+
+.gradient {
+    background: linear-gradient(90deg, #07ddf5, #026a75);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .custom-button {
     margin: 5px;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px;
+    border-radius: 10px;
     font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+}
+
+.custom-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(7, 221, 245, 0.4);
 }
 
 .first-color {
@@ -49,36 +71,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
-    text-align: center;
-}
-
-.footer {
-    background-color: #1a1a1a;
-    padding: 20px 0;
-    margin-top: 50px;
-}
-
-.footer-items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.footer-copyright {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.adv-card {
-    background-color: #1a1a1a;
-    padding: 25px;
-    border-radius: 15px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #07ddf5;
@@ -106,4 +98,27 @@ body {
     font-size: 16px;
     color: #ccc;
     margin: 0;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
 }
