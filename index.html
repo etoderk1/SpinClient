@@ -3,49 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpinClient</title>
+    <title>Главная | SpinClient</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://spinclient.com/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>SpinClient</h1>
-        <nav>
-            <ul>
-                <li><a href="#games">Игры</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
+<body style="background-color: rgb(18, 18, 20);">
+    <div class="body" style="height: 100vh !important">
+        <nav class="navbar navbar-expand-lg navbar-dark block-selection home-navbar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="justify-content-center navbar-collapse collapse" id="navbar-menu">
+                    <a class="navbar-brand logo" href="https://spinclient.com/">SpinClient</a>
+                    <ul class="navbar-nav me-auto mb-1 mb-lg-0 montserrat">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://spinclient.com/page/auth"><i class="fa-solid fa-right-from-bracket navbar-icon"></i>Войти в аккаунт</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-    </header>
 
-    <section id="games">
-        <h2>Игры</h2>
-        <div class="game">
-            <h3>Игра 1</h3>
-            <p>Описание первой игры.</p>
-            <button onclick="startGame1()">Играть</button>
+        <div class="container" style="font-family: Montserrat">
+            <div class="block-selection" style="margin-bottom: 250px;">
+                <div class="text-center">
+                    <h1 class="heading text-white"><span class="gradient">SpinClient</span> - ваш ключ к успеху</h1>
+                </div>
+
+                <div class="row buttons mx-auto col-xxl-5 col-xl-6 col-lg-7 col-md-9 col-sm-12 col-12" style="padding-top: 25px">
+                    <a role="button" class="custom-button btn first-color" style="border-color: #07ddf5;" id="scroll-button">Преимущества<i class="fa-solid fa-arrow-down"></i></a>
+                    <a href="https://spinclient.com/products" class="custom-button btn second-color" style="border-color: #026a75;" data-toggle="modal" data-target="#purchaseModal">Приобрести<i class="fa-solid fa-bag-shopping"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="game">
-            <h3>Игра 2</h3>
-            <p>Описание второй игры.</p>
-            <button onclick="startGame2()">Играть</button>
+    </div>
+
+    <div class="modal fade" id="purchaseModal" tabindex="-1" role="dialog" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="font-family: Montserrat;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="font-weight: 600;" id="purchaseModalLabel">Способ оплаты</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 id="productTitle"></h5>
+                    <p id="productDescription"></p>
+                    <p>Выберите удобный способ для вас:</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center" style="height: 60px;">
+                                <button type="button" class="btn custom-button first-color choose-button" style="border-color: #1bc6cf; width: 100%;">
+                                    <a href="https://discord.gg/spinclient" style="color: white !important; text-decoration: none !important;">
+                                        <i class="fa-brands fa-discord"></i> Discord
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center">
+                                <button type="button" class="btn custom-button first-color choose-button" style="border-color: #1bc6cf; width: 100%;">
+                                    <a href="https://funpay.com/users/123456/" style="color: white !important;text-decoration: none !important;">
+                                        <i class="fa-solid fa-money-bill"></i> FunPay
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center" style="margin-top: 20px;">
+                                <button type="button" class="btn custom-button second-color choose-button" style="border-color: #1b87cf; width: 100%;">
+                                    <a href="https://spinclient.com/products" style="color: white !important; text-decoration: none !important;">
+                                        <i class="fa-solid fa-money-bill"></i> На сайте
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn custom-button close-color mini-button" style="border-color: #DC143C;" data-dismiss="modal">Закрыть<i class="fa-solid fa-xmark fa-lg"></i></button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <section id="about">
-        <h2>О нас</h2>
-        <p>SpinClient — это платформа для развлечений и обучения.</p>
-    </section>
+    <div class="container" style="font-family: Montserrat">
+        <h1 class="text-white fade-in visible" id="avd-client">Преимущества</h1>
+        <br>
+        <div class="adv-cards">
+            <div class="adv-card fade-in visible">
+                <h2 class="adv-card-title"><i class="fa-solid fa-bolt fa-xs"></i> Обходы</h2>
+                <h5 class="adv-card-desc">Уникальные обходы дают возможность побеждать игроков</h5>
+            </div>
+            <div class="adv-card fade-in visible">
+                <h2 class="adv-card-title"><i class="fa-solid fa-brush fa-xs"></i> Персонализация</h2>
+                <h5 class="adv-card-desc">Большое количество тем и настроек позволяют настроить клиент именно под себя</h5>
+            </div>
+        </div>
+        <div class="adv-cards">
+            <div class="adv-card fade-in visible">
+                <h2 class="adv-card-title"><i class="fa-solid fa-chart-area fa-xs"></i> Оптимизация</h2>
+                <h5 class="adv-card-desc">Встроенный Optifine и дополнительные улучшения помогают увеличить FPS</h5>
+            </div>
+            <div class="adv-card fade-in visible">
+                <h2 class="adv-card-title"><i class="fa-solid fa-circle-info fa-xs"></i> Поддержка</h2>
+                <h5 class="adv-card-desc">Отзывчивая поддержка поможет в случае проблем</h5>
+            </div>
+        </div>
 
-    <section id="contact">
-        <h2>Контакты</h2>
-        <p>Свяжитесь с нами: example@spinclient.com</p>
-    </section>
+        <h1 class="text-white fade-in" style="margin-top:60px">Видеообзор</h1>
+        <br>
+        <iframe class="fade-in" height="600" width="100%" style="border: none; border-radius: 25px;" src="https://www.youtube.com/embed/example-video">
+        </iframe>
+    </div>
 
-    <footer>
-        <p>&copy; 2023 SpinClient. Все права защищены.</p>
-    </footer>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-items">
+                <div class="footer-left">
+                    <a href="https://spinclient.com/">Главная</a>
+                    <a href="https://spinclient.com/products">Купить</a>
+                    <a href="https://discord.gg/spinclient">Поддержка</a>
+                </div>
+                <div class="footer-right">
+                    <a href="https://discord.gg/spinclient">Discord</a>
+                    <a href="https://t.me/spinclient">Telegram</a>
+                    <a href="https://spinclient.com/eula">Пользовательское соглашение</a>
+                </div>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="footer-copyright">
+                <p>Copyright © SpinClient 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        document.getElementById('scroll-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            const target = document.getElementById('avd-client');
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    </script>
 </body>
 </html>

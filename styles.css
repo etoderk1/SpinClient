@@ -1,67 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: rgb(18, 18, 20);
+    color: white;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
+.navbar {
+    background-color: #1a1a1a;
     padding: 10px 0;
-    text-align: center;
 }
 
-header h1 {
-    margin: 0;
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
+.nav-link {
+    color: white !important;
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-}
-
-.game {
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
+.custom-button {
+    margin: 5px;
     padding: 10px 20px;
-    cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #555;
+.first-color {
+    background-color: #07ddf5;
+    color: white;
 }
 
-footer {
+.second-color {
+    background-color: #026a75;
+    color: white;
+}
+
+.adv-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
     text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 20px;
 }
