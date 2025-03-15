@@ -68,3 +68,36 @@ body {
     text-align: center;
     margin-top: 20px;
 }
+
+.adv-card {
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #07ddf5;
+}
+
+.adv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(7, 221, 245, 0.3);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: #07ddf5;
+    margin-bottom: 15px;
+}
+
+.adv-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #07ddf5;
+}
+
+.adv-card-desc {
+    font-size: 16px;
+    color: #ccc;
+    margin: 0;
+}
